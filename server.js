@@ -3,7 +3,7 @@ const mongose = require("mongoose");
 const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const PORT = 4000;
+const PORT = 3000;
 
 require("dotenv").config();
 
@@ -23,7 +23,7 @@ connection.once("open", () => {
 });
 
 //Routes
-const todo = require("./template/home-template");
+const todo = require("./template/template.route");
 
 app.use("/template", todo);
 
